@@ -1,0 +1,9 @@
+<h1>Index</h1>
+
+<%@pots.each do |post|%>
+    <div class="post_wrapper">
+        <h2 class= "title"><%= link_to post.title, post %></h2>
+        <p class= "date"><%= time_ago_in_words(post.created_at) %></p>
+        <p class="body"><%= post.content%></p>
+    </div>
+<%end%>
