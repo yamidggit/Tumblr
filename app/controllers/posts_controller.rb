@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     def index
-        @pots=Post.all
+        @pots=Post.all.order('created_at DESC')
     end
    
     def new
@@ -14,7 +14,8 @@ class PostsController < ApplicationController
         else
           # This line overrides the default rendering behavior, which
           # would have been to render the "create" view.
-            render "new"
+            render "new" # it uses render instead of redirect because render doesn't make a http request
+                        # if we make an http and the content haven't been save it will delete everything
         end
     end
     def show
