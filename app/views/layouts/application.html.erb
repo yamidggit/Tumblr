@@ -18,8 +18,9 @@
         <li><%= link_to "Posts", root_path %></li>
         <li><%= link_to "About", about_path %></li>
       </ul>
-      
-      <p class= "sign_in"> User Login</p>
+      <% if !user_signed_in? %>
+        <p class= "sign_in"> <%= link_to "User Login", new_user_session_path %></p>
+      <% end %>
     </div>
     
     <div id="main_content">
@@ -34,12 +35,15 @@
         <% end %>
         
         <div class= "buttons">
-          <button class="button"><%= link_to "Make Post", new_post_path %></button>
-          <button class="button">Log out</button>
+          <% if user_signed_in? %>
+            <button class="button"><%= link_to "Make Post", new_post_path %></button>
+            <button class="button"><%= link_to "Log out", destroy_user_session_path, method: :delete%></button>
+          <% end %>
         </div>
         
       </div>
-      
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
         
       <%= yield %> 
     </div>
