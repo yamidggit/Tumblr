@@ -2,6 +2,9 @@
 
 * Application like Tumblr that allows users to create posts that other people can comment on, but at the same time also have the option of displaying personal information . It was made in Ruby on Rails and styled using custom styling. Users created with Devise gem have the ability to create, read, update or destroy their posts.
 
+* Heroku
+    http://post-tumblr.herokuapp.com
+
 * Ruby version
     ruby 2.3.0p0
 
@@ -17,6 +20,7 @@
 * Database initialization
     rake db:migrate
     
-* Start the server
+* Start the server in development
     rails server -b $IP -p $PORT
+
 
