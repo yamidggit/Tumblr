@@ -208,11 +208,12 @@ a {
 	#page_wrapper {
 		padding: 3em;
 		#profile_image {
-			width: 300px;
+			width: 325px;
 			float: left;
 			margin-right: 2em;
 			img {
 				width: 100%;
+				height: 250px;
 				border-radius: 0.35em;
 			}
 		}
@@ -224,13 +225,11 @@ a {
 				font-size: 1.1em;
 				line-height: 1.75;
 			}
-			a {
-				color: #33acb7;
-				font-weight: 700;
-				text-decoration: none;
-			}
+		
 		}
 	}
+	
+	
 	.links {
 		margin: 2em 0;
 	}
